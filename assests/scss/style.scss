@@ -14,8 +14,86 @@ main {
   min-width: 100vw;
   background: linear-gradient(
     138deg,
-    rgb(32, 201, 255) 36.7%,
-    rgba(0, 9, 187, 0.89) 84.4%,
+    rgba(32, 199, 255, 0.548) 36.7%,
+    rgba(0, 9, 187, 0.411) 84.4%,
     rgb(255, 255, 255) 119.7%
   );
+  display: grid;
+  place-items: center;
+}
+.heading {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  position: relative;
+}
+.heading::before {
+  content: "O";
+  color: red;
+  position: absolute;
+  left: -2rem;
+  font-weight: 500;
+}
+.heading::after {
+  content: "X";
+  color: red;
+  position: absolute;
+  right: -2rem;
+  font-weight: 500;
+}
+.player-stutus {
+  border: 1px solid black;
+  background-color: aliceblue;
+  border-radius: 1rem;
+  padding: 0.5rem 3rem;
+}
+.current-player {
+  color: red;
+  font-weight: 500;
+}
+.game-grid {
+  background-color: whitesmoke;
+  width: 20rem;
+  aspect-ratio: 1/1;
+  border-radius: 1rem;
+  background: #e0e0e0;
+  box-shadow: 40px 50px 100px #5a5a5a, -40px -50px 100px #ffffff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2rem;
+}
+.box {
+  font-size: 3rem;
+  font-weight: 500;
+  display: grid;
+  border: 1px solid rgba(0, 0, 0, 0.623);
+  place-items: center;
+}
+.btn-reset {
+  border: 1px solid black;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(254, 255, 165) 0%,
+    rgb(255, 232, 182) 90%
+  );
+  border-radius: 1rem;
+  padding: 0.5rem 3rem;
+}
+
+@media screen and (max-width: 420px) {
+  .heading {
+    font-size: 1rem;
+  }
+  .heading::before {
+    left: -1rem;
+  }
+  .heading::after {
+    right: -1rem;
+  }
+  .game-grid {
+    width: 15rem;
+  }
+  .box {
+    font-size: 2rem;
+  }
 }
