@@ -1,4 +1,8 @@
-* {
+@import url(untility.scss);
+// resets
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,6 +22,7 @@ main {
     rgba(0, 9, 187, 0.411) 84.4%,
     rgb(255, 255, 255) 119.7%
   );
+  // centring
   display: grid;
   place-items: center;
 }
@@ -78,8 +83,11 @@ main {
   );
   border-radius: 1rem;
   padding: 0.5rem 3rem;
+  cursor:pointer;
 }
-
+.green {
+  background-color: greenyellow;
+}
 @media screen and (max-width: 420px) {
   .heading {
     font-size: 1rem;
