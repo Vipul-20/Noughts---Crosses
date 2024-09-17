@@ -16,12 +16,7 @@ button input {
 main {
   min-height: 100vh;
   min-width: 100vw;
-  background: linear-gradient(
-    138deg,
-    rgba(32, 199, 255, 0.548) 36.7%,
-    rgba(0, 9, 187, 0.411) 84.4%,
-    rgb(255, 255, 255) 119.7%
-  );
+  background: linear-gradient(138deg, #feffa57a 36.7%, #3b00bb92 84.4%, #fff 119.7%);
   // centring
   display: grid;
   place-items: center;
@@ -57,12 +52,12 @@ main {
   font-weight: 500;
 }
 .game-grid {
-  background-color: whitesmoke;
+  background-color: rgba(245, 245, 245, 0.904);
   width: 20rem;
   aspect-ratio: 1/1;
   border-radius: 1rem;
   background: #e0e0e0;
-  box-shadow: 40px 50px 100px #5a5a5a, -40px -50px 100px #ffffff;
+  box-shadow: 40px 40px 100px #383838c6, -40px -40px 90px #ffffff;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 2rem;
@@ -84,6 +79,7 @@ main {
   border-radius: 1rem;
   padding: 0.5rem 3rem;
   cursor:pointer;
+  visibility: hidden;
 }
 .green {
   background-color: greenyellow;
