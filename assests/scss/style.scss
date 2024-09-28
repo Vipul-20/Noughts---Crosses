@@ -75,6 +75,7 @@ main {
   display: grid;
   border: 1px solid rgba(0, 0, 0, 0.623);
   place-items: center;
+  cursor: pointer;
 }
 .btn-reset {
   border: 1px solid black;

@@ -1,5 +1,4 @@
 import chances from "./chances.js";
-// console.log(chances);
 
 const headingEl = document.querySelector(".heading");
 const currPlayerEl = document.querySelector(".current-player");
@@ -40,7 +39,6 @@ function handleBoxClick(input) {
   }
 }
 
-// console.log("boxs");
 boxes.forEach(function (_, index) {
   _.addEventListener("click", function () {
     handleBoxClick(index);
@@ -48,7 +46,7 @@ boxes.forEach(function (_, index) {
 });
 
 function handleReset() {
-  alert("hello");
+  alert("Bhai ruk jaa abhi game pura nhi hua hai");
 }
 resetBtn.addEventListener("click", handleReset);
 
