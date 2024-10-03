@@ -25,7 +25,38 @@ function swapPlayer() {
 function startGame() {
   currPlayer = getPlayer();
   virtualgrid = new Array(9).fill("");
-  currentPlayer.textContent = currPlayer;
+  currPlayer.textContent = currPlayer;
+}
+
+function checkIfwon() {
+  chances.forEach((chances) => {
+    const [c1, c2, c3] = chances;
+    if (
+      virtualgrid[c1] === virtualgrid[c2] &&
+      virtualgrid[c2] === virtualgrid[c1] &&
+      virtualgrid[c3] === virtualgrid[c2] &&
+      virtualgrid[c1] !== "" &&
+      virtualgrid[c2] !== "" &&
+      virtualgrid[c3] !== ""
+    ) {
+      const winner = virtualgrid[c1];
+      headingEl.textContent = `winner:${winner}`;
+
+      boxes[c1].classList.add("green");
+      boxes[c2].classList.add("green");
+      boxes[c3].classList.add("green");
+
+      boxes.forEach((box) => (box.style.pointerEvents = "none"));
+
+      resetBtn.classList.toggle("active");
+
+      return;
+    }
+  });
+  const x = virtualgrid.every((e) => e !== "");
+
+  if (x) headingEl.textContent = "there is tie!";
+  resetBtn.classList.toggle("active");
 }
 
 function handleBoxClick(input) {
@@ -34,7 +65,8 @@ function handleBoxClick(input) {
     boxes[input].textContent = currPlayer;
     boxes[input].style.cursor = "auto";
     virtualgrid[input] = currPlayer;
-    console.log(virtualgrid);
+    // console.log(virtualgrid);
+    checkIfwon();
     swapPlayer();
   }
 }
