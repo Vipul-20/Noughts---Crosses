@@ -78,7 +78,7 @@ boxes.forEach(function (_, index) {
 });
 
 function handleReset() {
-  alert("Bhai ruk jaa abhi game pura nhi hua hai");
+  // alert("Bhai ruk jaa abhi game pura nhi hua hai");
 }
 resetBtn.addEventListener("click", handleReset);
 
